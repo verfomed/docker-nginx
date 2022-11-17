@@ -1,10 +1,10 @@
 node {
    def gitcommit
-//    stage('Verificación SCM') {
-//      checkout scm
-//      sh "git rev-parse --short HEAD > .git/commit-id"                        
-//      gitcommit = readFile('.git/commit-id').trim()
-//    }
+   stage('Verificación SCM') {
+     checkout scm
+     sh "git rev-parse --short HEAD > .git/commit-id"                        
+     gitcommit = readFile('.git/commit-id').trim()
+   }
 //    stage('test') {
 //      nodejs(nodeJSInstallationName: 'nodejs') {
 //        sh 'npm install --only=dev'
