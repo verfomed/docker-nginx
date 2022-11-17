@@ -18,6 +18,6 @@ node {
      }
    }
    stage('run image') {
-    docker.image("verfomed/webserver:${gitcommit}").withRun('-p 8082:80' + ' -d' + ' --name webserver_test')
+    docker.image("verfomed/webserver:${gitcommit}").run('-p 8082:80' + ' -d' + ' --name webserver_test')
    }
 }
