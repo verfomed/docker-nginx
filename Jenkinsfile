@@ -13,7 +13,7 @@ node {
 //    }
    stage('Docker Build & Push') {
      docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-      def nuestraapp = docker.build("verfomed/webserver:${gitcommit}", ".")
+      def nuestraapp = docker.build("verfomed/webserver:${gitcommit}")
       nuestraapp.push()
      }
    }
