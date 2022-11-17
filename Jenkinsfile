@@ -17,4 +17,7 @@ node {
       nuestraapp.push()
      }
    }
+   stage('run image') {
+    docker.image("verfomed/webserver:${gitcommit}").withRun('-p 8082:80' + ' -d' + ' --name webserver_test')
+   }
 }
