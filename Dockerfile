@@ -1,2 +1,2 @@
-FROM nginx:latest
+FROM nginx:1-bullseye
 COPY ./index.html /usr/share/nginx/html/index.html
